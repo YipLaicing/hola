@@ -1,0 +1,10 @@
+{
+    "server": {
+        "url": "localhost",
+        "port": 3000
+    },
+    "db": {
+        "url": "mongodb://localhost:27017/hola-test",
+        "port": 27017
+    }
+}

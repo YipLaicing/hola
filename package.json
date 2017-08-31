@@ -1,0 +1,24 @@
+{
+  "name": "hola",
+  "version": "1.0.0",
+  "description": "hola-server",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "hola",
+    "map"
+  ],
+  "dependencies": {
+    "config": "^1.26.2",
+    "koa": "2.0.0",
+    "koa-bodyparser": "3.2.0",
+    "koa-redis": "3.0.0",
+    "koa-router": "7.0.0",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.9"
+  }
+}
