@@ -57,9 +57,9 @@ const putMoment = async (moment) => {
 
     //photo处理
     const imgLoc = path.join('photo', Math.random().toString())
-    // const reader = fs.createReadStream(moment.photo.path)
-    // const stream = fs.createWriteStream(path.join('public', imgLoc))
-    // reader.pipe(stream)
+    const reader = fs.createReadStream(moment.photo.path)
+    const stream = fs.createWriteStream(path.join('public', imgLoc))
+    reader.pipe(stream)
     moment.photo = imgLoc
     console.log(imgLoc)
 
