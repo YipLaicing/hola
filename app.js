@@ -19,7 +19,7 @@ app.use(bodyParser());
 app.use(router.routes());
 app.use(staticServer(path.join(__dirname, "public")))
 
-app.listen(serverPort);
+const server = app.listen(serverPort)
 console.log(`app started at port ${serverPort}...`);
 
 const staticFolder = path.join(__dirname, 'public')
@@ -33,4 +33,8 @@ if (!fs.existsSync(avatarFolder)) {
 }
 if (!fs.existsSync(photoFolder)) {
     fs.mkdirSync(photoFolder);
+}
+
+module.exports = {
+    server
 }

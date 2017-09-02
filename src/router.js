@@ -2,13 +2,14 @@ const router = require('koa-router')();
 const business = require('./business.js');
 
 const commitTime = require('moment')
+const cli = require('cli-color')
 
 const hello = async () => {
     router.get('/aa', async (ctx, next) => {
         console.log('hello')
         // console.log(ctx.request.body)
         ctx.body = 'affds'
-        const returnVal = await business.check();
+        // const returnVal = await business.check();
     })
 }
 hello();
@@ -43,8 +44,9 @@ login()
 
 const putMoment = async () => {
     router.post('/users/:userId/moments', async (ctx, next) => {
-        // console.log(ctx.request.body)
-        if (ctx.request.body.files) {
+        console.log(ctx.request)
+        // if (ctx.request.type != "multipart/form-data") return { isOK: false, err: "wrong type" }
+        if (ctx.request.body.files && ctx.request.body.files.photo) {
             let moment = {}
             moment.userid = ctx.params.userId
             moment.photo = ctx.request.body.files.photo
