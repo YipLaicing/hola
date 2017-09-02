@@ -2,6 +2,7 @@ const db = require('./db.js')
 
 const fs = require('fs')
 const path = require('path')
+const cli = require('cli-color')
 
 const register = async (user) => {
     let isOK

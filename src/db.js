@@ -3,6 +3,8 @@ const mongo = require('mongodb')
 const monk = require('monk')
 const db2 = monk(url)
 
+const cli = require('cli-color')
+
 const userCollection = db2.get('user')
 const momentCollection = db2.get('moment')
 const commentCollection = db2.get('comment')
