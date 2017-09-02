@@ -1,4 +1,5 @@
-const url = require('config').get('db').get('url')
+const dbConfig = require('config').get('db')
+const url = dbConfig.url + ':' + dbConfig.port + '/' + dbConfig.dbname
 const mongo = require('mongodb')
 const monk = require('monk')
 const db2 = monk(url)
