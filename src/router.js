@@ -6,10 +6,7 @@ const cli = require('cli-color')
 
 const hello = async () => {
     router.get('/aa', async (ctx, next) => {
-        console.log('hello')
-        // console.log(ctx.request.body)
         ctx.body = 'affds'
-        // const returnVal = await business.check();
     })
 }
 hello();
